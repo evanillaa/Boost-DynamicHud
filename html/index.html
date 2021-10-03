@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/tailwind.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/0.6.1/progressbar.min.js" integrity="sha512-7IoDEsIJGxz/gNyJY/0LRtS45wDSvPFXGPuC7Fo4YueWMNOmWKMAllEqo2Im3pgOjeEwsOoieyliRgdkZnY0ow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+  <title>Boost-Hud</title>
+  <style>
+    ::-webkit-scrollbar {
+display: none;
+}
+
+</style>
+</head>
+<body class='flex-1 h-screen w-full font-lato' x-show.transition.200ms="show" x-data="main()" x-init="listen()">
+  <!--Main container-->
+  <div class="absolute flex flex-row items-start justify-start h-screen w-screen transition-all ease-in-out" :style="`left: ${h_side}px; top: ${h_height}px`">
+   <!--Status hud-->
+   <div class='container flex flex-row space-x-1 w-auto items-center bg-gray-800 rounded-lg py-2 px-1 transition-all ease-in-out'>
+    <div class="microphone">
+      <div class="mic h-10 w-10 bg-black rounded-full bg-opacity-40 flex justify-center items-center">
+          <span class="absolute"><i class="fas fa-microphone text-sm text-white my-1"></i></span>
+      </div>
+    </div>
+
+    <div class="health">
+      <div class="hp h-10 w-10 bg-black rounded-full bg-opacity-40 flex justify-center items-center">
+          <span class="absolute"><i class="fas fa-heart text-sm text-red-500 my-auto"></i></span>
+      </div>
+    </div>
+
+    <div class="armor">
+      <div class="ar h-10 w-10 bg-black rounded-full bg-opacity-40 flex justify-center items-center">
+          <span class="absolute"><i class="fas fa-shield-alt text-sm text-indigo-500"></i></span>
+      </div>
+    </div>
+
+    <div class="hunger">
+      <div class="hg h-10 w-10 bg-black rounded-full bg-opacity-40 flex justify-center items-center">
+          <span class="absolute"><i class="fas fa-drumstick-bite text-sm text-yellow-500"></i></span>
+      </div>
+    </div>
+
+    <div class="thirst">
+      <div class="th h-10 w-10 bg-black rounded-full bg-opacity-40 flex justify-center items-center">
+          <span class="absolute"><i class="fas fa-tint text-sm text-blue-500"></i></span>
+      </div>
+    </div>
+	
+	  <div class="stress">
+      <div class="st h-10 w-10 bg-black rounded-full bg-opacity-40 flex justify-center items-center">
+          <span class="absolute"><i class="fas fa-brain text-sm text-purple-500"></i></span>
+      </div>
+    </div>
+
+   </div>
+  </div>
+</body>
+<script src="app.js" type="text/javascript"></script>
+</html>
+
+
